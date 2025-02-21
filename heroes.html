@@ -17,9 +17,38 @@
             background-color: rgba(0, 0, 0, 0.422);
             color: antiquewhite;
         }
-        .h2{
-            
+        .btn{
+          padding: 3%;
+          background-color: brown;
+          color: aliceblue;
+          border-radius: 15%;
+          border-color: black;
+          cursor: pointer;
+          display: inline-block;
         }
+        .btn:active{
+          background-color: green;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        label {
+            padding: 10px 20px;
+            background-color: rgba(194, 2, 2, 0.911);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+
+        input[type="checkbox"]:checked + label {
+            background-color: green;
+        }
+
     </style>
 </head>
 <body>
@@ -143,6 +172,13 @@
           </div>
         </div>
       </div>
+      <button type="button" class="btn">Danger</button>
+
+
+
+    <input type="checkbox" id="toggle">
+    
+    <label for="toggle">Haz clic aquí</label>
 
 </body>
 </html>
