@@ -1,73 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .titulo {
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+          .titulo {
+              text-align: center;
+              background-color: black;
+              color: white;
+              padding: 3%;
+          }
+          body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #000 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .hero {
+            background: url('https://wallpapercave.com/wp/wp4659302.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            background-color: black;
-            color: white;
-            padding: 3%;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero h1 {
+            position: relative;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
         }
         .contenido {
             max-width: 900px;
-            margin: auto;
-            padding: 20px;
+            margin: 40px auto;
             text-align: justify;
         }
-        .h2{
-            color: antiquewhite ;
+        .card {
+            background-color: #2c2c2c;
+            color: white;
+            border: none;
+            margin-bottom: 20px;
         }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Avengers</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="heroes.html">Héroes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="historia.html">Historia</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="favorito.html">Personaje Favorito</a>
-              </li>
-            </ul>
+        .card h2 {
+            color: #ffc107;
+        }
+        .imagen-circular {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+      </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Avengers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="heroes.html">Héroes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="favorito.html">Personaje Favorito</a>
+                </li>
+              </ul>
+            </div>
           </div>
+        </nav>
+
+        <div class="titulo">
+          <h1>Historia de los Avengers</h1>
         </div>
-      </nav>
+        <!-- Imagen circular debajo del título -->
+      <img src="imagenes.img/a58a2e003db83fd47d7a429708b3d628.jpg" alt="Avengers" class="imagen-circular">
 
-      <div class="titulo">
-        <h1>Historia de los Avengers</h1>
+        <div class="contenido">
+          <p>Los Avengers, conocidos como los Vengadores en español, son un equipo de superhéroes creado por Marvel Comics. Su primera aparición fue en <strong>The Avengers #1</strong> en 1963, creados por <em>Stan Lee</em> y <em>Jack Kirby</em>.</p>
+          
+          <h2>Los Inicios</h2>
+          <p>El equipo original estaba formado por <strong>Iron Man, Thor, Hulk, Ant-Man y la Avispa</strong>. Juntos se unieron para enfrentar a Loki, quien representaba una gran amenaza. Tras esta primera misión, decidieron seguir luchando contra el mal bajo el nombre de 'Los Vengadores'.</p>
+          
+          <h2>Evolución y Nuevos Miembros</h2>
+          <p>Con el tiempo, los Avengers crecieron y dieron la bienvenida a nuevos miembros como <strong>Capitán América, Hawkeye, Black Widow, Scarlet Witch y Vision</strong>. Cada uno aportó habilidades únicas que fortalecieron al equipo.</p>
+          
+          <h2>Grandes Batallas</h2>
+          <p>Los Avengers han enfrentado diversas amenazas a lo largo de los años, desde invasiones alienígenas hasta entidades cósmicas. Entre sus batallas más épicas se encuentran la lucha contra <strong>Ultron, Thanos y Kang el Conquistador</strong>.</p>
+          
+          <h2>Los Avengers en el Cine</h2>
+          <p>En 2012, Marvel Studios lanzó <strong>The Avengers</strong>, reuniendo a los héroes en una de las películas más exitosas de la historia. Con el tiempo, se expandió con películas como <strong>Age of Ultron, Infinity War y Endgame</strong>, consolidando a los Avengers como el equipo más poderoso del cine.</p>
       </div>
-      <div class="contenido">
-        <p>Los Avengers, conocidos como los Vengadores en español, son un equipo de superhéroes creado por Marvel Comics. Su primera aparición fue en <strong>The Avengers #1</strong> en 1963, creados por <em>Stan Lee</em> y <em>Jack Kirby</em>.</p>
-        
-        <h2>Los Inicios</h2>
-        <p>El equipo original estaba formado por <strong>Iron Man, Thor, Hulk, Ant-Man y la Avispa</strong>. Juntos se unieron para enfrentar a Loki, quien representaba una gran amenaza. Tras esta primera misión, decidieron seguir luchando contra el mal bajo el nombre de 'Los Vengadores'.</p>
-        
-        <h2>Evolución y Nuevos Miembros</h2>
-        <p>Con el tiempo, los Avengers crecieron y dieron la bienvenida a nuevos miembros como <strong>Capitán América, Hawkeye, Black Widow, Scarlet Witch y Vision</strong>. Cada uno aportó habilidades únicas que fortalecieron al equipo.</p>
-        
-        <h2>Grandes Batallas</h2>
-        <p>Los Avengers han enfrentado diversas amenazas a lo largo de los años, desde invasiones alienígenas hasta entidades cósmicas. Entre sus batallas más épicas se encuentran la lucha contra <strong>Ultron, Thanos y Kang el Conquistador</strong>.</p>
-        
-        <h2>Los Avengers en el Cine</h2>
-        <p>En 2012, Marvel Studios lanzó <strong>The Avengers</strong>, reuniendo a los héroes en una de las películas más exitosas de la historia. Con el tiempo, se expandió con películas como <strong>Age of Ultron, Infinity War y Endgame</strong>, consolidando a los Avengers como el equipo más poderoso del cine.</p>
-    </div>
 
+        
       
-    
-</body>
-</html>
+  </body>
+  </html>

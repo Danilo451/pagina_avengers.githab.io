@@ -14,6 +14,39 @@
             padding: 3%;
             color: white    ;
         }
+        body {
+            background-color: #121212;
+            color: white;
+        }
+        .titulo {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 3%;
+        }
+        .imagen-circular {
+            display: block;
+            margin: 20px auto;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+        .nombre {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+            color: #ff2e00;
+        }
+        .descripcion {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+            padding: 15px;
+        }
     </style>
 </head>
 <body>
@@ -40,16 +73,15 @@
       </nav>
       <div class="titulo">
         <h1>Personaje Favorito</h1>
-      </div>
-      <div>
-        <div>
-            <img src="imagenes.img/au_marvel_spiderman60th_hero_r_823e6bbf.jpeg" width="100%" alt="">
-            <h1>Spaiderman</h1>
+    </div>
 
-        </div>
-        
-        
-      </div>
+    <div class="container text-center mt-4">
+        <img src="imagenes.img/images.jpg" alt="Spider-Man" class="imagen-circular">
+        <h2 class="nombre">Spider-Man</h2>
+        <p class="descripcion">
+            Spider-Man, también conocido como Peter Parker, es uno de los superhéroes más icónicos de Marvel. Creado por Stan Lee y Steve Ditko. Su agilidad, fuerza sobrehumana y sentido arácnido lo convierten en un luchador formidable contra el crimen en Nueva York.
+        </p>
+    </div>
     
 </body>
 </html>l
